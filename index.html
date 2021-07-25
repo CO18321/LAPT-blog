@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Matrix Factorization</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="mainbody">
+
+       <div class="headblock">
+          <span class="headtext">Matrix Factorization</span><br><br>
+          <br><br>
+          <div class="imgandtxt">
+            <img class = "myphoto"  src ="images//me.jpg" alt="Ganga Singh" title="Ganga Singh" >
+            <span><a class="headtext2", href="https://www.linkedin.com/in/ganga-singh-56497018b/">Ganga Singh, CO18321</a></span>
+          </div>
+      </div>
+
+      <div class="content">
+          <span class="disc">
+            Matrix factorization, also known as matrix decomposition, is a way of breaking down a matrix into constituent elements, making it easier to calculate more complex matrix operations. The factoring of integers, such as factoring 24 into 6 x 4, is a common analogy for matrix decomposition or factorization.
+
+            <br><br>These methods are the cornerstone of linear algebra in computers, even for basic tasks like solving systems of linear equations, computing the inverse, and computing the determinant of a matrix.
+
+            <br><br>Matrix decomposition has a wide range of applications in machine learning, ranging from lowering the computational cost of operations on large matrices to recommender systems used by companies like Amazon, Netflix, UberEats, and Youtube.
+
+          </span><br>
+          <span ><img class="imgs" src="images//netflix.jpg" alt="netflix" title="netflix"></span>
+          <span ><a class = "img_href" href="https://unsplash.com/photos/5wThjqG6HBU">Image from Unsplash</a> </span> <br>
+          <span class="disc">
+             In the context of recommender systems, it is a type of collaborative filtering technique used to find similarities in a user's previous behavior and generate predictions based on other users' preferences. It operates by breaking down the user-item interaction matrix into two lower-dimensional rectangular matrices, namely the user matrix and the item matrix.
+          </span><br>
+             <span ><img class="imgs" src="images//1.png" alt="decomposition in Recommender system" title="decomposition in Recommender system"></span>
+             <span ><a class = "img_href" href="https://buomsoo-kim.github.io/recommender%20systems/2020/09/25/Recommender-systems-collab-filtering-12.md/">Image from Codinfox</a> </span>
+             <br>
+             <span class="disc">
+               There are numerous matrix decompositions, each with a unique set of properties that are beneficial for a specific task. Two basic and commonly used matrix decomposition methods are LU decomposition and QR decomposition.
+              </span>
+          </span>
+
+      </div>
+
+      <div class="content">
+          <br><br><br>
+          <span class="heading">LU Decomposition</span><br>
+
+          <span class="disc"> <br>The LU abbreviation stands for lower–upper decomposition. It decomposes a matrix into two parts: L and U where L is a lower triangular matrix and U is an upper triangular matrix.
+            <br><br>
+        <script src="https://gist.github.com/CO18321/b35ed19c2a224aa547c8dde43b345fdd.js"></script>
+
+            <br>The LU decomposition is applied to square matrices using an iterative numerical procedure but it can fail for non-decomposable matrices thus, the product LU sometimes contains a permutation matrix to stabilize the results. It is frequently used to simplify the solution of systems of linear equations, such as computing the determinant and inverse of a matrix or finding the coefficients in linear regression.
+
+            <br><br>In Python, we use lu() from scipy.linalg to implement the LU decomposition. This function, in particular, computes a PLU decomposition.
+            <br><br>
+            <script src="https://gist.github.com/CO18321/bb906085b32bb8cd566084f1001a54f2.js"></script>
+            <!-- <script src="https://gist.github.com/CO18321/c8521adfd1ea3a4fd1049fc30cacfee4.js"></script> -->
+        </span>
+      </div>
+
+      <div class="content">
+          <br><br><br>
+          <span class="heading">QR Decomposition</span><br>
+
+          <span class="disc"> <br> The QR decomposition splits a matrix into Q and R components, with Q being an orthogonal matrix and R being an upper triangular matrix. Unlike LU decomposition, QR decomposition may be used for any m x n matrix and is not confined to square matrices.
+            <br><br>
+            <script src="https://gist.github.com/CO18321/16895782e0efa3f50422c480d05f59fc.js"></script>
+
+            <br>The QR decomposition is widely used to solve the systems of linear equations, linear least squares problems and linear regression algorithms. The R programming language's lm() function, for example, utilizes QR decomposition to determine the coefficients of independent variables.
+
+
+            <br><br>In Python, we use the qr() function in NumPy to implement the QR decomposition. The function by default reduces the dimensions of returned Q and R matrices to make future operations efficient. By providing the mode option as ‘complete,' we can get the anticipated sizes of m x m for Q and m x n for R.
+            <br><br>
+
+            <script src="https://gist.github.com/CO18321/c8521adfd1ea3a4fd1049fc30cacfee4.js"></script>
+        </span>
+      </div>
+
+      <div class="content">
+          <br><br><br>
+          <span class="ref">References</span>
+          <br><br>
+          <span ><a class = "aref" href="https://machinelearningmastery.com/introduction-to-matrix-decompositions-for-machine-learning/">A Gentle Introduction to Matrix Factorization for Machine Learning</a> </span>
+          <br><br>
+          <span ><a class = "aref" href="https://en.wikipedia.org/wiki/Matrix_decomposition#LU_decomposition">Wikipedia: Matrix decomposition</a> </span>
+          <br><br>
+          <span ><a class = "aref" href="https://towardsdatascience.com/recommendation-system-matrix-factorization-d61978660b4b">Recommender System — Matrix Factorization</a> </span>
+          <br>
+      </div>
+      <div class="content">
+        <br><br>
+      <span class="greytext">
+        Last Updated on July 25, 2021
+      </span>
+    </div>
+
+  </div>
+  </body>
+</html>
